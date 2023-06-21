@@ -1,28 +1,234 @@
-# Create T3 App
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+    <img src="https://github.com/vdutts7/yt-chat-mkbhd/blob/main/public/yt-chat-logo_.png" alt="Logo" width="80" height="80">
+    <img src="https://github.com/vdutts7/yt-chat-mkbhd/blob/main/public/mkbhd.png" alt="Logo" width="75" height="75">
+    <img src="https://github.com/vdutts7/yt-chat-mkbhd/blob/main/public/openai.png" alt="Logo" width="67" height="67">
 
-This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
+  
+  </a>
+  <h2 align="center">YouTubeGPT ft. Marques Brownlee (@MKBHD) </h2> <p align="center"> AI Chatbot with 100+ videos from tech/gadget YouTuber Marques Brownlee <a href="https://www.youtube.com/@mkbhd"> @MKBHD </a> </p> </div> <p align="center"> <img src="https://github.com/vdutts7/yt-chat-mkbhd/blob/main/public/p.gif"/> </p> 
 
-## What's next? How do I make an app with this?
+<!-- TABLE OF CONTENTS -->
+## Table of Contents
+  <ol>
+    <a href="#about">📝 About</a>
+        <ul>
+        </ul>
+    <a href="#how-to-build">💻 How to build</a>
+        <ul>
+            <li><a href="#initial-setup">Initial setup</a></li>
+            <li><a href=#handle-massive-data>Handle massive data</a></li>
+            <li><a href=#embeddings-and-database-backend>Embeddings and database backend</a></li>
+            <li><a href=#Frontend-UI-with-chat>Frontend UI with chat</a></li>
+            <li><a href=#run-app>Run app</a></li>
+        </ul>
+    <a href="#next-steps">🚀 Next steps</a>
+        <ul>
+            <li><a href=#deploy>Deploy</a></li>
+            <li><a href=#customizations>Customizations</a></li>
+        </ul>
+    <a href="#tools-used">🔧 Tools used</a>
+        <ul>
+        </ul>
+    <a href="#contact">👤 Contact</a>
+  </ol>
 
-We try to keep this project as simple as possible, so you can start with just the scaffolding we set up for you, and add additional things later when they become necessary.
+<br ></br>
 
-If you are not familiar with the different technologies used in this project, please refer to the respective docs. If you still are in the wind, please join our [Discord](https://t3.gg/discord) and ask for help.
+<!-- ABOUT -->
+## 📝 About
 
-- [Next.js](https://nextjs.org)
-- [NextAuth.js](https://next-auth.js.org)
-- [Prisma](https://prisma.io)
-- [Tailwind CSS](https://tailwindcss.com)
-- [tRPC](https://trpc.io)
+Chat with 100+ YouTube videos from any creator in less than 10 minutes. This project combines basic Python scripting, vector embeddings, OpenAI, Pinecone, and Langchain into a modern chat interface, allowing you to quickly reference any content your favorite YouTuber covers. Type in natural language and get returned detailed answers: (1) in the style / tone of your YouTuber, and (2) with the top 2-3 specific videos referenced hyperlinked.
 
-## Learn More
+_Example used in this repo is tech content creator Marques Brownlee, also known as MKBHD_ 
 
-To learn more about the [T3 Stack](https://create.t3.gg/), take a look at the following resources:
+<p align="right">(<a href="#readme-top">back to top</a>)</p> 
 
-- [Documentation](https://create.t3.gg/)
-- [Learn the T3 Stack](https://create.t3.gg/en/faq#what-learning-resources-are-currently-available) — Check out these awesome tutorials
 
-You can check out the [create-t3-app GitHub repository](https://github.com/t3-oss/create-t3-app) — your feedback and contributions are welcome!
+## 💻 How to build 
+_Note: macOS version, adjust accordingly for Windows / Linux_
 
-## How do I deploy this?
+### Initial setup
 
-Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
+Clone and install dependencies:
+
+```
+git clone https://github.com/vdutts7/yt-ai-chat
+cd yt-ai-chat
+npm i
+```
+
+Copy `.env.example` and rename to `.env` in root directory. Fill out API keys:
+
+```
+ASSEMBLY_AI_API_TOKEN=""
+OPENAI_API_KEY=""
+PINECONE_API_KEY=""
+PINECONE_ENVIRONMENT=""
+PINECONE_INDEX=""
+```
+
+Get API keys:
+- [AssemblyAI](https://www.assemblyai.com/docs) - ~ $3.50 per 100 vids
+- [OpenAI](https://help.openai.com/en/articles/4936850-where-do-i-find-my-secret-api-key)
+- [Pinecone](https://docs.pinecone.io/docs/quickstart)
+      
+_**IMPORTANT: Verify that `.gitignore` contains `.env` in it.**_
+
+
+### Handle massive data
+
+Outline: 
+- Export metadata (.csv) of YouTube videos ⬇️
+- Download the audio files
+- Transcribe audio files
+
+Navigate to `scripts` folder, which will host all of the data from the YouTube videos. 
+   
+   ```
+   cd scripts
+   ```
+
+Setup python environemnt:
+
+```
+conda env list
+conda activate youtube-chat
+pip install -r requirements.txt
+```
+  
+Scrape YouTube channel-- replace `@mkbhd` with channel of your choice. Replace `100` with the number of videos you want included (the script traverses backwards starting from most recent upload). A new file `mkbhd.csv` will be created at the directory as referenced below:
+
+```
+python scripts/scrape_vids.py https://www.youtube.com/@mkbhd 100 scripts/vid_list/mkbhd.csv
+```
+
+Refer to `example_mkbhd.csv` inside folder and verify your output matches this format:
+
+<img width="400" alt="image" src="https://github.com/vdutts7/yt-ai-chat/assets/63992417/7bf1c02c-7201-48b4-9607-e6de72fcafa2">
+    
+Download audio files:
+
+```
+python scripts/download_yt_audios.py scripts/vid_list/mkbhd.csv scripts/audio_files/
+```
+
+<img width="130" alt="image" src="https://github.com/vdutts7/yt-ai-chat/assets/63992417/8c16f79a-2957-4d45-b81e-c450cf7e77f1">
+
+We will utilize AssemblyAI's API wrapper class for OpenAI's Whisper API. Their script provides step-by-step directions for a more efficient, faster speech-to-text conversion as Whisper is way too slow and will cost you more. I spent ~ $3.50 to transcribe the 100 videos for MKBHD. 
+
+<img width="348" alt="image" src="https://github.com/vdutts7/yt-ai-chat/assets/63992417/e40716c7-1ab6-460a-bd39-b7658c052958">
+
+```
+python scripts/transcribe_audios.py scripts/audio_files/ scripts/transcripts
+```
+
+<img width="164" alt="image" src="https://github.com/vdutts7/yt-ai-chat/assets/63992417/f1105604-145b-4019-8026-f1c262497cde">
+
+Upsert to Pinecone database:
+
+```
+python scripts/pinecone_helper.py scripts/vid_list/mkbhd.csv scripts/transcripts/
+```
+
+Pinecone index setup I used below. I used P1 since this is optimized for speed. 1536 is OpenAI's standard we're limited to when querying data from the vectorstore: 
+<img width="951" alt="image" src="https://github.com/vdutts7/yt-ai-chat/assets/63992417/01deb2f1-f563-4e9d-97bf-d32ccda61d62">
+
+### Embeddings and database backend
+
+Breaking down `scripts/pinecone_helper.py` :
+- Chunk size of 1000 characters with 500 character overlap. I found this working for me but obviously experiment and adjust according to your content library's size, complexity, etc.
+- Metadata: (1) video url and (2) video title
+
+With Pinecone vectorstore loaded, we use Langchain's Conversational Retrieval QA to ask questions, extract relevant metadata from our embeddings, and deliver back to the user in a packaged format as an answer. 
+
+The relevant video titles are cited via hyperlinks directly to the video url.
+
+### Frontend UI with chat
+
+NextJs styled with Tailwind CSS. `src/pages/index.tsx` contains base skeleton. `src/pages/api/chat-chain.ts` is heart of the code where the Langchain connections are outlined.
+
+### Run app
+
+```
+npm run dev
+```
+
+Go to `http://localhost:3000`. You should be able to type and ask questions now. Done ✅ 
+
+<img src="https://github.com/vdutts7/yt-ai-chat/assets/63992417/0a795dca-41e4-4d34-80b9-ebe19268571c" alt="Logo" width="390" height="390">
+<img width="500" alt="Screenshot 2023-06-20 at 4 17 08 PM" src="https://github.com/vdutts7/yt-ai-chat/assets/63992417/ae39f653-1ea2-4b96-8ea3-1a09cd008cbd">
+
+
+## 🚀 Next steps
+
+### Deploy
+
+I used [Vercel](https://vercel.com/dashboard) as this was a relatively small project.
+
+_Alternatives: Heroku, Firebase, AWS Elastic Beanstalk, DigitalOcean, etc._
+
+### Customizations
+
+**UI/UX:** change to your liking. 
+
+**Bot personality:** edit prompt template in `/src/pages/api/chat-chain.ts` to fine-tune and add greater control on the bot's outputs.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+<!-- BUILT WITH -->
+## 🔧 Built With
+[![Next][Next]][Next-url]
+[![Typescript][Typescript]][Typescript-url]
+[![Python][Python]][Python-url]
+[![Langchain][Langchain]][Langchain-url]
+[![OpenAI][OpenAI]][OpenAI-url]
+[![AssemblyAI][AssemblyAI]][AssemblyAI-url]
+[![Pinecone][Pinecone]][Pinecone-url]
+[![Tailwind CSS][TailwindCSS]][TailwindCSS-url]
+[![Vercel][Vercel]][Vercel-url]
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+<!-- CONTACT -->
+## 👤 Contact
+
+`me@vdutts7.com` 
+
+🔗 Project Link: `https://github.com/vdutts7/yt-ai-chat`
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+
+[Python]: https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54
+[Python-url]: https://www.python.org/
+
+[Next]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
+[Next-url]: https://nextjs.org/
+
+[Langchain]: https://img.shields.io/badge/🦜🔗Langchain-DD0031?style=for-the-badge&color=<brightgreen>
+[Langchain-url]: https://langchain.com/
+
+[TailwindCSS]: https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=skyblue&color=0A192F
+[TailwindCSS-url]: https://tailwindcss.com/
+
+[OpenAI]: https://img.shields.io/badge/OpenAI%20ada--002%20GPT--3.5%20Whisper-0058A0?style=for-the-badge&logo=openai&logoColor=white&color=4aa481
+[OpenAI-url]: https://openai.com/
+
+[AssemblyAI]: https://img.shields.io/badge/Assembly_AI-DD0031?style=for-the-badge&logo=https://github.com/vdutts7/yt-ai-chat/public/assemblyai.png&color=blue
+[AssemblyAI-url]: https://www.assemblyai.com/
+
+[TypeScript]: https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white
+[Typescript-url]: https://www.typescriptlang.org/
+
+[Pinecone]: https://img.shields.io/badge/Pinecone-FFCA28?style=for-the-badge&https://github.com/vdutts7/yt-ai-chat/public/pinecone.png&logoColor=black&color=white
+[Pinecone-url]: https://www.pinecone.io/
+
+[Vercel]: https://img.shields.io/badge/Vercel-FFFFFF?style=for-the-badge&logo=Vercel&logoColor=white&color=black
+[Vercel-url]: https://Vercel.com/
