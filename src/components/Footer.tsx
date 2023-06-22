@@ -10,13 +10,13 @@ const Footer = () => {
             href="https://twitter.com/vdutts7"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-purple-600 hover:font-bold"
+            className="text-purple-800 hover:font-bold"
           >
             @vdutts7.
           </a>
         </span>
-          Access the source code
-          <a href="https://github.com/vdutts7/youtube-gpt" target="_blank" rel="noopener noreferrer" className="text-purple-600 
+          Access full source code template
+          <a href="https://github.com/vdutts7/youtube-gpt" target="_blank" rel="noopener noreferrer" className="text-purple-800 
           hover:font-bold"> here.</a>
       </p>
     </div>

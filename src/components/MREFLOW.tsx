@@ -18,7 +18,7 @@ const MREFLOW = () => (
       <div className="mb-2 text-2xl text-center font-bold"> Matt Wolfe 🐺
         <span className="mx-2">  </span>
       </div>
-      <div className="text-base text-xs text-gray-400 text-center">YouTuber  •  AI Bot 🤖</div>
+      <div className="text-base text-xs text-gray-400 text-center">AI News & Content Creator  •   AI Bot 🤖</div>
 
       <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: '0rem' }}>
         

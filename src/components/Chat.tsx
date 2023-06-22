@@ -139,7 +139,8 @@ function Chat() {
                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" 
                 className="flex-shrink-0 ml-2 hover:cursor-pointer rounded-full p-1 bg-purple-600 focus:border-white 
                             shadow-outline text-white hover:stroke-white"
-                style={{ boxShadow: '0 0 10px 5px rgba(255, 0, 0, 0.5)' }}>
+                // style={{ boxShadow: '0 0 10px 5px rgba(255, 0, 0, 0.5)' }}>
+                style={{ boxShadow: '0 0 10px 5px rgba(136, 58, 225, 0.5)' }}>
               <path d="M12 5l0 14" className="hover:stroke-white hover:shadow-white"></path>
               <path d="M18 11l-6 -6" className="hover:stroke-white hover:shadow-white"></path>
               <path d="M6 11l6 -6" className="hover:stroke-white hover:shadow-white"></path>
