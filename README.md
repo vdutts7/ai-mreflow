@@ -54,8 +54,8 @@ _Note: macOS version, adjust accordingly for Windows / Linux_
 Clone and install dependencies:
 
 ```
-git clone https://github.com/vdutts7/yt-ai-chat
-cd yt-ai-chat
+git clone https://github.com/vdutts7/youtube-gpt
+cd youtube-gpt
 npm i
 ```
 
@@ -98,10 +98,10 @@ conda activate youtube-chat
 pip install -r requirements.txt
 ```
   
-Scrape YouTube channel-- replace `@mkbhd` with channel of your choice. Replace `100` with the number of videos you want included (the script traverses backwards starting from most recent upload). A new file `mkbhd.csv` will be created at the directory as referenced below:
+Scrape YouTube channel-- replace `@mkbhd` with @<username> of your choice. Replace `<k-last-vids>` with the number of videos you want included (the script traverses backwards starting from most recent upload). A new file `<your-csv-file>.csv` will be created at the directory as referenced below:
 
 ```
-python scripts/scrape_vids.py https://www.youtube.com/@mkbhd 112 scripts/vid_list/mkbhd.csv
+python scripts/scrape_vids.py https://www.youtube.com/@<username> `<k-last-vids>` scripts/vid_list/<your-csv-file>.csv
 ```
 
 Refer to `example_mkbhd.csv` inside folder and verify your output matches this format:
@@ -111,7 +111,7 @@ Refer to `example_mkbhd.csv` inside folder and verify your output matches this f
 Download audio files:
 
 ```
-python scripts/download_yt_audios.py scripts/vid_list/mkbhd.csv scripts/audio_files/
+python scripts/download_yt_audios.py scripts/vid_list/<your-csv-file>.csv scripts/audio_files/
 ```
 
 <img width="130" alt="image" src="https://github.com/vdutts7/yt-ai-chat/assets/63992417/8c16f79a-2957-4d45-b81e-c450cf7e77f1">
@@ -129,7 +129,7 @@ python scripts/transcribe_audios.py scripts/audio_files/ scripts/transcripts
 Upsert to Pinecone database:
 
 ```
-python scripts/pinecone_helper.py scripts/vid_list/mkbhd.csv scripts/transcripts/
+python scripts/pinecone_helper.py scripts/vid_list/<your-csv-file>.csv scripts/transcripts/
 ```
 
 Pinecone index setup I used below. I used P1 since this is optimized for speed. 1536 is OpenAI's standard we're limited to when querying data from the vectorstore: 
@@ -198,7 +198,7 @@ _Alternatives: Heroku, Firebase, AWS Elastic Beanstalk, DigitalOcean, etc._
 
 `me@vdutts7.com` 
 
-🔗 Project Link: `https://github.com/vdutts7/yt-ai-chat`
+🔗 Project Link: `https://github.com/vdutts7/youtube-gpt`
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

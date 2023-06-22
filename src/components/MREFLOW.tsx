@@ -31,6 +31,15 @@ const MREFLOW = () => (
             alt="Matt Wolfe AI"
           />
         </a>
+        <a href="https://www.twitter.com/mreflow">
+          <Image
+            width={24}
+            height={24}
+            className="mx-auto rounded-full"
+            src="/twitter.png"
+            alt="Matt Wolfe AI"
+          />
+        </a>
         <a href="https://www.youtube.com/@mreflow">
           <IconExternalLink
               className="ml-1 text-gray-400 hover:text-purple-600"

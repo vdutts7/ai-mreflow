@@ -16,7 +16,7 @@ const Footer = () => {
           </a>
         </span>
           Access the source code
-          <a href="https://github.com/vdutts7/yt-ai-chat" target="_blank" rel="noopener noreferrer" className="text-red-600 
+          <a href="https://github.com/vdutts7/youtube-gpt" target="_blank" rel="noopener noreferrer" className="text-purple-600 
           hover:font-bold"> here.</a>
       </p>
     </div>
