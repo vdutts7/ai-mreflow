@@ -7,7 +7,7 @@
 
   
   </a>
-  <h2 align="center">YouTubeGPT ft. Marques Brownlee (@MKBHD) </h2> <p align="center"> AI Chatbot with 100+ videos from tech/gadget YouTuber Marques Brownlee <a href="https://www.youtube.com/@mkbhd"> @MKBHD </a> </p> </div> <p align="center"> <img src="https://github.com/vdutts7/yt-chat-mkbhd/blob/main/public/p.gif"/> </p> 
+  <h2 align="center">YouTubeGPT ft. Matt Wolfe (@mreflow) </h2> <p align="center"> AI Chatbot with 100+ videos from all-things-AI news and updates YouTuber Matt Wolfe <a href="https://www.youtube.com/@mkbhd"> @mreflow </a> </p> </div> <p align="center"> <img src="https://github.com/vdutts7/yt-chat-mkbhd/blob/main/public/p.gif"/> </p> 
 
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
@@ -41,7 +41,7 @@
 
 Chat with 100+ YouTube videos from any creator in less than 10 minutes. This project combines basic Python scripting, vector embeddings, OpenAI, Pinecone, and Langchain into a modern chat interface, allowing you to quickly reference any content your favorite YouTuber covers. Type in natural language and get returned detailed answers: (1) in the style / tone of your YouTuber, and (2) with the top 2-3 specific videos referenced hyperlinked.
 
-_Example used in this repo is tech content creator Marques Brownlee, also known as MKBHD_ 
+_Example used in this repo is tech content creator Matt Wolfe.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p> 
 
