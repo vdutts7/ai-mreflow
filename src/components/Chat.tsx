@@ -76,7 +76,7 @@ function Chat() {
            
             <div
               className={`rounded-lg px-4 py-2${
-                          message.sender === "User" ? " bg-white text-black" : " bg-red-600 text-white"
+                          message.sender === "User" ? " bg-white text-black" : " bg-purple-600 text-white"
               }`}
               style={{
 
@@ -127,7 +127,7 @@ function Chat() {
         <div ref={messagesEndRef} />
       </div>
       <div>
-        <form onSubmit={handleSubmit} className="cursorr-red w-full h-12 my-4 flex relative">
+        <form onSubmit={handleSubmit} className="cursorr-purple w-full h-12 my-4 flex relative">
           <input
             type="text"
             disabled={loading}
@@ -137,7 +137,7 @@ function Chat() {
           <button className="absolute top-2 right-2">
             <svg xmlns="http://www.w3.org/2000/svg" width="26" height="28" viewBox="0 0 24 24" fill="none" 
                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" 
-                className="flex-shrink-0 ml-2 hover:cursor-pointer rounded-full p-1 bg-red-600 focus:border-white 
+                className="flex-shrink-0 ml-2 hover:cursor-pointer rounded-full p-1 bg-purple-600 focus:border-white 
                             shadow-outline text-white hover:stroke-white"
                 style={{ boxShadow: '0 0 10px 5px rgba(255, 0, 0, 0.5)' }}>
               <path d="M12 5l0 14" className="hover:stroke-white hover:shadow-white"></path>

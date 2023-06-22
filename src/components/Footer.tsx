@@ -1,4 +1,3 @@
-// Footer.tsx
 import React from "react";
 
 const Footer = () => {
@@ -11,7 +10,7 @@ const Footer = () => {
             href="https://twitter.com/vdutts7"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-red-600 hover:font-bold"
+            className="text-purple-600 hover:font-bold"
           >
             @vdutts7.
           </a>

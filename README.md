@@ -2,7 +2,7 @@
 <br />
 <div align="center">
     <img src="https://github.com/vdutts7/yt-chat-mkbhd/blob/main/public/yt-chat-logo_.png" alt="Logo" width="80" height="80">
-    <img src="https://github.com/vdutts7/yt-chat-mkbhd/blob/main/public/mkbhd.png" alt="Logo" width="75" height="75">
+    <img src="https://github.com/vdutts7/yt-chat-mkbhd/blob/main/public/mreflow.jpeg" alt="Logo" width="75" height="75">
     <img src="https://github.com/vdutts7/yt-chat-mkbhd/blob/main/public/openai.png" alt="Logo" width="67" height="67">
 
   
@@ -101,7 +101,7 @@ pip install -r requirements.txt
 Scrape YouTube channel-- replace `@mkbhd` with channel of your choice. Replace `100` with the number of videos you want included (the script traverses backwards starting from most recent upload). A new file `mkbhd.csv` will be created at the directory as referenced below:
 
 ```
-python scripts/scrape_vids.py https://www.youtube.com/@mkbhd 100 scripts/vid_list/mkbhd.csv
+python scripts/scrape_vids.py https://www.youtube.com/@mkbhd 112 scripts/vid_list/mkbhd.csv
 ```
 
 Refer to `example_mkbhd.csv` inside folder and verify your output matches this format:
@@ -116,7 +116,7 @@ python scripts/download_yt_audios.py scripts/vid_list/mkbhd.csv scripts/audio_fi
 
 <img width="130" alt="image" src="https://github.com/vdutts7/yt-ai-chat/assets/63992417/8c16f79a-2957-4d45-b81e-c450cf7e77f1">
 
-We will utilize AssemblyAI's API wrapper class for OpenAI's Whisper API. Their script provides step-by-step directions for a more efficient, faster speech-to-text conversion as Whisper is way too slow and will cost you more. I spent ~ $3.50 to transcribe the 100 videos for MKBHD. 
+We will utilize AssemblyAI's API wrapper class for OpenAI's Whisper API. Their script provides step-by-step directions for a more efficient, faster speech-to-text conversion as Whisper is way too slow and will cost you more. I spent ~ $3.50 to transcribe the 112 videos for Matt Wolfe. 
 
 <img width="348" alt="image" src="https://github.com/vdutts7/yt-ai-chat/assets/63992417/e40716c7-1ab6-460a-bd39-b7658c052958">
 

@@ -12,6 +12,11 @@ node_modules
 /prisma/db.sqlite
 /prisma/db.sqlite-journal
 
+# data
+/scripts/audio_files/
+/scripts/transcripts/
+
+
 # next.js
 /.next/
 /out/
