@@ -14,7 +14,7 @@ function Navbar() {
 
         <div className="text-white mt-2 ml-4 font-bold text-lg flex items-center">
           <span className="title-text">Matt Wolfe 🐺</span>  
-          <span className="mx-2">The YouTube GPT</span>
+          <span className="mx-2"> | </span>
           <span className="mx-2">AI Chatbot</span>
         </div>
       </div>

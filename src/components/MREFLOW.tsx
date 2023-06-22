@@ -40,7 +40,7 @@ const MREFLOW = () => (
 
       </div>
       <div className="text-base text-center text-xs text-gray-400 pt-2 mx-0">
-        What&rsquo;s up everyone, I made an AI doppelgänger chatbot to geek out about tech when I&rsquo;m not around! This little guy hardcore studying all my videos and abosrbing some serious MKBHD wisdom!
+        Hey everyone, it&rsquo;s me, Matt. Not really, but I&rsquo;m the AI version chatbot thingy that can talk to you about all things tech! It&rsquo;s been studying my videos which feels weird to say as I&rsquo;m probably going to make another one after this...
       </div>
     </div>
   </div>
