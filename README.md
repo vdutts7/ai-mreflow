@@ -196,7 +196,7 @@ _Alternatives: Heroku, Firebase, AWS Elastic Beanstalk, DigitalOcean, etc._
 
 `me@vdutts7.com` 
 
-🔗 Project Link: `https://github.com/vdutts7/youtube-gpt`
+🔗 Project Link: `https://github.com/vdutts7/ai-mreflow`
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
