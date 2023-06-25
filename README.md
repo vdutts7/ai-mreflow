@@ -7,7 +7,7 @@
 
   
   </a>
-  <h2 align="center">YouTubeGPT ft. Matt Wolfe (@mreflow) </h2> <p align="center"> AI Chatbot with 100+ videos from all-things-AI news and updates YouTuber Matt Wolfe <a href="https://www.youtube.com/@mkbhd"> @mreflow </a> </p> </div> <p align="center"> <img src="https://github.com/vdutts7/yt-chat-mkbhd/blob/main/public/p.gif"/> </p> 
+  <h2 align="center">YouTubeGPT ft. Matt Wolfe (@mreflow) </h2> <p align="center"> AI Chatbot with 100+ videos from all-things-AI news and updates YouTuber Matt Wolfe <a href="https://www.youtube.com/@mreflow"> @mreflow </a> </p> </div> <p align="center"> <img src="https://github.com/vdutts7/yt-chat-mkbhd/blob/main/public/p.gif"/> </p> 
 
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
@@ -98,7 +98,7 @@ conda activate youtube-chat
 pip install -r requirements.txt
 ```
   
-Scrape YouTube channel-- replace `@mkbhd` with @<username> of your choice. Replace `<k-last-vids>` with the number of videos you want included (the script traverses backwards starting from most recent upload). A new file `<your-csv-file>.csv` will be created at the directory as referenced below:
+Scrape YouTube channel-- replace `@mreflow` with @<username> of your choice. Replace `<k-last-vids>` with the number of videos you want included (the script traverses backwards starting from most recent upload). A new file `<your-csv-file>.csv` will be created at the directory as referenced below:
 
 ```
 python scripts/scrape_vids.py https://www.youtube.com/@<username> `<k-last-vids>` scripts/vid_list/<your-csv-file>.csv
@@ -157,7 +157,7 @@ npm run dev
 
 Go to `http://localhost:3000`. You should be able to type and ask questions now. Done ✅ 
 
-<img width="500" alt="image" src="https://github.com/vdutts7/youtube-gpt/assets/63992417/71ae2a44-534a-4a86-b0a6-9710309da259">
+<img width="350" alt="image" src="https://github.com/vdutts7/youtube-gpt/assets/63992417/71ae2a44-534a-4a86-b0a6-9710309da259">
 <img width="500" alt="image" src="https://github.com/vdutts7/youtube-gpt/assets/63992417/1b770ff6-a276-49a9-8edd-0fbb3f7826a4">
 
 ## 🚀 Next steps
