@@ -21,10 +21,10 @@ def download_audio(url, output_path):
 
 
 def extract_video_id(url):
-    parsed_url = urlparse(url)
+    video_url = url.split(',')[0]
+    parsed_url = urlparse(video_url)
     video_id = parse_qs(parsed_url.query).get('v', [None])[0]
     return video_id
-
 
 def main(csv_file, output_folder):
     with open(csv_file, 'r') as f:
@@ -41,8 +41,10 @@ def main(csv_file, output_folder):
             print(f"Couldn't extract video ID from URL: '{url}'")
             continue
         output_path = os.path.join(output_folder, video_id)
-        download_audio(url, output_path)
-
+        if os.path.exists(output_path):
+            print(f"Skipping {url}: output file already exists")
+        else:
+            download_audio(url, output_path)
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(

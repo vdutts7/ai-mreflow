@@ -18,7 +18,7 @@ const MREFLOW = () => (
       <div className="mb-2 text-2xl text-center font-bold"> Matt Wolfe 🐺
         <span className="mx-2">  </span>
       </div>
-      <div className="text-base text-xs text-gray-400 text-center">AI News & Content Creator  •   AI Bot 🤖</div>
+      <div className="text-base text-xs text-gray-400 text-center">Content Creator  •   AI Bot 🤖</div>
 
       <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: '0rem' }}>
         
@@ -33,18 +33,15 @@ const MREFLOW = () => (
         </a>
         <a href="https://www.twitter.com/mreflow">
           <Image
-            width={24}
-            height={24}
-            className="mx-auto rounded-full"
+            width={22}
+            height={22}
+            className="mx-auto ml-1"
             src="/twitter.png"
             alt="Matt Wolfe AI"
           />
         </a>
         <a href="https://www.youtube.com/@mreflow">
-          <IconExternalLink
-              className="ml-1 text-gray-400 hover:text-purple-600"
-              size={14}
-            />
+          
         </a>
 
       </div>

@@ -1,4 +1,5 @@
 .env
 audio_files/
-vid_list/
 transcripts/
+delete_mp3.py
+

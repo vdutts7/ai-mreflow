@@ -54,24 +54,30 @@ def main(videos_data, transcriptions_directory):
         reader = csv.DictReader(f)
         for row in reader:
             try:
+                print(row['title'])
                 print(row['url'])
                 video_id = row['url'].split('=')[-1]
+                print(video_id)
+                video_title = row['title']
+                print(video_title)
 
                 # Search for the JSON file that contains the video ID
                 for filename in os.listdir(transcriptions_directory):
-                    if video_id in filename:
-                        json_file_path = os.path.join(transcriptions_directory, filename)
-                        with open(json_file_path, 'r') as json_file:
-                            data = json.load(json_file)
-                            transcript = data.get('text')
-                            if transcript:
-                                store_transcript(
-                                    transcript, row['url'], row.get('title'))
-                            else:
-                                print(f"No transcript in {json_file_path}")
-                        break
+                    if filename.endswith('.json'):
+                        video_id = filename.split('.')[0]
+                        if video_id == row['url'].split('=')[-1]:
+                            json_file_path = os.path.join(transcriptions_directory, filename)
+                            with open(json_file_path, 'r') as json_file:
+                                data = json.load(json_file)
+                                transcript = data.get('text')
+                                if transcript:
+                                    store_transcript(
+                                        transcript, row['url'], video_title)
+                                else:
+                                    print(f"No transcript in {json_file_path}")
+                            break
                 else:
-                    print(f"No JSON file found for video ID {video_id}")
+                    print(f"No JSON file found for video ID {video_id}") 
             except KeyError as e:
                 print(f"Missing field: {e}")
 
