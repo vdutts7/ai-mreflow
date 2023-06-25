@@ -41,8 +41,6 @@
 
 Chat with 100+ YouTube videos from any creator in less than 10 minutes. This project combines basic Python scripting, vector embeddings, OpenAI, Pinecone, and Langchain into a modern chat interface, allowing you to quickly reference any content your favorite YouTuber covers. Type in natural language and get returned detailed answers: (1) in the style / tone of your YouTuber, and (2) with the top 2-3 specific videos referenced hyperlinked.
 
-_Example used in this repo is tech content creator Matt Wolfe.
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p> 
 
 
@@ -54,8 +52,8 @@ _Note: macOS version, adjust accordingly for Windows / Linux_
 Clone and install dependencies:
 
 ```
-git clone https://github.com/vdutts7/youtube-gpt
-cd youtube-gpt
+git clone https://github.com/vdutts7/ai-mreflow
+cd ai-mreflow
 npm i
 ```
 
