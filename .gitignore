@@ -13,8 +13,10 @@ node_modules
 /prisma/db.sqlite-journal
 
 # data
-/scripts/audio_files/
-/scripts/transcripts/
+/scripts/audio_files2/
+/scripts/transcripts2/
+delete_mp3.py
+/scripts/vid_list/mreflow.csv
 
 
 # next.js

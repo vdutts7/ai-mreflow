@@ -157,8 +157,9 @@ npm run dev
 
 Go to `http://localhost:3000`. You should be able to type and ask questions now. Done ✅ 
 
-<img width="350" alt="image" src="https://github.com/vdutts7/youtube-gpt/assets/63992417/71ae2a44-534a-4a86-b0a6-9710309da259">
-<img width="500" alt="image" src="https://github.com/vdutts7/youtube-gpt/assets/63992417/1b770ff6-a276-49a9-8edd-0fbb3f7826a4">
+<img src="https://github.com/vdutts7/yt-ai-chat/assets/63992417/0a795dca-41e4-4d34-80b9-ebe19268571c" alt="Logo" width="390" height="390">
+<img width="500" alt="Screenshot 2023-06-20 at 4 17 08 PM" src="https://github.com/vdutts7/yt-ai-chat/assets/63992417/ae39f653-1ea2-4b96-8ea3-1a09cd008cbd">
+
 
 ## 🚀 Next steps
 

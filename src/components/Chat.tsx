@@ -76,7 +76,7 @@ function Chat() {
            
             <div
               className={`rounded-lg px-4 py-2${
-                          message.sender === "User" ? " bg-white text-black" : " bg-purple-600 text-white"
+                          message.sender === "User" ? " glassy3 text-black" : " bg-purple-600 text-white"
               }`}
               style={{
 
@@ -130,13 +130,14 @@ function Chat() {
         <form onSubmit={handleSubmit} className="cursorr-purple w-full h-12 my-4 flex relative">
           <input
             type="text"
+            placeholder="Ask away!"
             disabled={loading}
             onChange={(e) => setInput(e.target.value)}
-            className="text-white bg-zinc-800 flex-grow rounded-md border border-gray-300 px-3 py-2 glassy2 focus:outline-none focus:border-white focus:shadow-outline box-shadow:2px 2px 5px 5px rgba(106, 106, 106, 0.8)" value={input} />
+            className="text-white bg-zinc-300 flex-grow rounded-md border border-gray-300 px-3 py-2 glassy-no-glow-form focus:outline-none focus:border-white focus:shadow-outline box-shadow:2px 2px 5px 5px rgba(106, 106, 106, 0.8)" value={input} />
 
           <button className="absolute top-2 right-2">
             <svg xmlns="http://www.w3.org/2000/svg" width="26" height="28" viewBox="0 0 24 24" fill="none" 
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" 
+                stroke="currentColor" stroke-width="2" strokeLinecap="round" stroke-linejoin="round" 
                 className="flex-shrink-0 ml-2 hover:cursor-pointer rounded-full p-1 bg-purple-600 focus:border-white 
                             shadow-outline text-white hover:stroke-white"
                 // style={{ boxShadow: '0 0 10px 5px rgba(255, 0, 0, 0.5)' }}>

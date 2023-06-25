@@ -1,3 +1,0 @@
-[console_scripts]
-pinecone = pinecone.cli:main
-

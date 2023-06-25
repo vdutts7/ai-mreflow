@@ -1,5 +1,7 @@
 .env
-audio_files/
-transcripts/
+audio_files2/
+transcripts2/
 delete_mp3.py
+vid_list/mreflow.csv
+
 

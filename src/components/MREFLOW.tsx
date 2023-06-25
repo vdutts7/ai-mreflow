@@ -46,7 +46,7 @@ const MREFLOW = () => (
 
       </div>
       <div className="text-base text-center text-xs text-gray-400 pt-2 mx-0">
-        Hey everyone, it&rsquo;s me, Matt. Not really, but I&rsquo;m the AI version chatbot thingy that can talk to you about all things tech! It&rsquo;s been studying my videos which feels weird to say as I&rsquo;m probably going to make another one after this...
+        Hey everyone, it&rsquo;s me, Matt! <br></br>Well, Not really... I&rsquo;m actually this AI chatbot thingy trained on Matt&rsquo;s videos! Cool, right? 
       </div>
     </div>
   </div>

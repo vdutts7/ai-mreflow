@@ -35,11 +35,25 @@
     padding: 10px;
   }
 
+  .glassy3 {
+    background-color: rgb(216, 186, 255);
+    border: 1px solid white;
+    padding: 10px;
+  }
+
   .glassy-no-glow {
     background-color: rgba(0, 0, 0, 0.4);
-    border: 0.2px solid rgb(123, 123, 123);
+    border: 0.2px solid rgb(106, 99, 119);
     opacity: 0.git 9;
     padding: 10px;
+  }
+  
+  .glassy-no-glow-form {
+    background-color: rgba(19, 0, 56, 0.4);
+    opacity: 0.git 0;
+    padding: 10px;
+    box-shadow: 2px 2px 5px 5px rgba(106, 106, 106, 0.8);
+
   }
 
   .glassy-no-glow2 {
@@ -57,7 +71,7 @@
 
   .chat-container {
     background-color: rgb(0, 0, 0, 0.4);
-    border: 0.2px solid rgb(123, 123, 123);
+    border: 0.2px solid rgb(114, 100, 125);
     opacity: 1.git 0;
     margin-left: 2px;
   }
