@@ -104,7 +104,7 @@ Scrape YouTube channel-- replace `@mreflow` with @<username> of your choice. Rep
 python scripts/scrape_vids.py https://www.youtube.com/@<username> `<k-last-vids>` scripts/vid_list/<your-csv-file>.csv
 ```
 
-Refer to `example_mkbhd.csv` inside folder and verify your output matches this format:
+Refer to `example.csv` inside folder and verify your output matches this format:
 
 <img width="400" alt="image" src="https://github.com/vdutts7/yt-ai-chat/assets/63992417/7bf1c02c-7201-48b4-9607-e6de72fcafa2">
     
