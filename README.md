@@ -2,7 +2,7 @@
 <br />
 <div align="center">
     <img src="https://github.com/vdutts7/yt-chat-mkbhd/blob/main/public/yt-chat-logo_.png" alt="Logo" width="80" height="80">
-    <img src="https://github.com/vdutts7/yt-chat-mkbhd/blob/main/public/mreflow.jpeg" alt="Logo" width="75" height="75">
+    <img src="https://github.com/vdutts7/ai-mreflow/blob/main/public/mreflow.jpeg" alt="Logo" width="75" height="75">
     <img src="https://github.com/vdutts7/yt-chat-mkbhd/blob/main/public/openai.png" alt="Logo" width="67" height="67">
 
   
