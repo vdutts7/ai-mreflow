@@ -61,7 +61,7 @@ function Chat() {
   };
   return (
     <div className="m-3 ml-1 flex-col overflow-y-auto chat-container px-2 rounded-lg sm:p-4 sm:border border-neutral-300 shadow-2xl">
-      <div className="w-full bg-black flex-grow space-y-4 overflow-y-auto p-4">
+      <div className="w-full flex-grow space-y-4 overflow-y-auto p-4">
 
         {messages.map((message) => {
           // This will store the URLs we have seen for this message
@@ -132,7 +132,7 @@ function Chat() {
             type="text"
             disabled={loading}
             onChange={(e) => setInput(e.target.value)}
-            className="text-white bg-zinc-800 flex-grow rounded-md border border-gray-300 px-3 py-2 glassy focus:outline-none focus:border-white focus:shadow-outline box-shadow:2px 2px 5px 5px rgba(106, 106, 106, 0.8)" value={input} />
+            className="text-white bg-zinc-800 flex-grow rounded-md border border-gray-300 px-3 py-2 glassy2 focus:outline-none focus:border-white focus:shadow-outline box-shadow:2px 2px 5px 5px rgba(106, 106, 106, 0.8)" value={input} />
 
           <button className="absolute top-2 right-2">
             <svg xmlns="http://www.w3.org/2000/svg" width="26" height="28" viewBox="0 0 24 24" fill="none" 

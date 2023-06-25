@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className="bottom-0 my-auto text-xs w-full bg-black p-6 text-white">
+    <div className="bottom-0 my-auto text-xs w-full fg1 p-6 text-white">
       <p className="text-center">
         Scripts, backend, UI made by 
         <span className="ml-1">

@@ -6,14 +6,29 @@
 
 
 .dark-gradient {
-    top: 0;
-    left: 0;
-    background-color: #151515;
-    z-index: -1;
-  }
+  top: 0;
+  left: 0;
+  background-color: #151515;
+  z-index: -1;
+}
+
+.dark2-gradient {
+  top: 0;
+  left: 0;
+  background-color: #19003e;
+  z-index: -1;
+}
 
   .glassy {
     background-color: rgba(11, 11, 11, 0.4);
+    border: 1px solid white;
+    box-shadow: 2px 2px 5px 5px rgba(106, 106, 106, 0.8);
+    opacity: 0.git 9;
+    padding: 10px;
+  }
+
+  .glassy2 {
+    background-color: rgba(32, 0, 83, 0.4);
     border: 1px solid white;
     box-shadow: 2px 2px 5px 5px rgba(106, 106, 106, 0.8);
     opacity: 0.git 9;
@@ -27,8 +42,21 @@
     padding: 10px;
   }
 
+  .glassy-no-glow2 {
+    background-color: rgba(19, 0, 56, 0.4);
+    border: 0.2px solid rgb(123, 123, 123);
+    opacity: 0.git 9;
+    padding: 10px;
+  }
+  
+
+  .fg1 {
+    background-color: rgba(0, 0, 0, 0.4);
+    opacity: 0.git 9;
+  }
+
   .chat-container {
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(0, 0, 0, 0.4);
     border: 0.2px solid rgb(123, 123, 123);
     opacity: 1.git 0;
     margin-left: 2px;

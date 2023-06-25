@@ -6,7 +6,7 @@ import { IconBrandTwitter } from "@tabler/icons-react";
 
 function Navbar() {
   return (
-    <nav className="flex items-center justify-between bg-black px-12 py-4">
+    <nav className="flex items-center justify-between fg1 px-12 py-4">
       <div className="flex items-left">
         <a href="https://the-youtube-gpt.vercel.app">    
           <img src="/yt-chat-logo_.png" alt="yt-chat-logo" className="h-12" />
