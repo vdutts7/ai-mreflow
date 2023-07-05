@@ -7,7 +7,7 @@
 
   
   </a>
-  <h2 align="center">YouTubeGPT ft. Matt Wolfe (@mreflow) </h2> <p align="center"> AI Chatbot with 100+ videos from YouTuber Matt Wolfe <a href="https://www.youtube.com/@mreflow"> @mreflow </a> </p> </div> <p align="center"> <img src="https://github.com/vdutts7/constitutionGPT/blob/main/public/screen-rec.gif"/> </p> 
+  <h2 align="center">YouTubeGPT ft. Matt Wolfe (@mreflow) </h2> <p align="center"> AI Chatbot with 100+ videos from YouTuber Matt Wolfe <a href="https://www.youtube.com/@mreflow"> @mreflow </a> </p> </div> <p align="center"> <img src="https://github.com/vdutts7/ai-mreflow/blob/main/public/screen-rec.gif"/> </p> 
 
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
