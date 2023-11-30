@@ -9,7 +9,7 @@ const Home = () => {
     <div>
       <div className="mt-2 text-center text-xs text-gray-500">
         <i>
-          Note: bot comments are not real and not associated with Matt Wolfe. This is fiction. Check out <a href="https://ai-mkbhd.vercel.app/" style={{opacity: 0.8 }} className="text-purple-500 hover:font-bold">MKBHD AI</a>
+          Note: bot comments are NOT real and not associated with Matt Wolfe. This is fiction. Check out <a href="https://ai-mkbhd.vercel.app/" style={{opacity: 0.8 }} className="text-purple-500 hover:font-bold">MKBHD AI</a>
          </i>
       </div>
       <div className="mx-auto mt-10 flex w-full max-w-7xl flex-col md:flex-row ">
